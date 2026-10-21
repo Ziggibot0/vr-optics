@@ -1,0 +1,58 @@
+{
+  "inputs": {
+    "f": 45.0,
+    "d": 44.0,
+    "e": 18.0,
+    "ipd": 63.0,
+    "dl": 25.0
+  },
+  "phone_mm": {
+    "w": 146.7,
+    "h": 63.5,
+    "t": 8.2
+  },
+  "derived": {
+    "frame_width_mm": 104.8,
+    "frame_height_mm": 49.0,
+    "tray_width_mm": 154.7,
+    "lens_bore_mm": 25.8,
+    "depth_face_to_back_mm": 55.2,
+    "depth_eye_to_phone_back_mm": 70.2,
+    "depth_with_clearance_mm": 76.2,
+    "virtual_image_m": 1.98,
+    "phone_dist_for_2m_mm": 44.01,
+    "fov_h_deg": 61.2,
+    "fov_v_deg": 54.2,
+    "fov_limited_by": "phone width / phone height",
+    "e_needed_to_hide_bezel_mm": 28.6,
+    "black_margin_outer_edges_mm": 10.3
+  },
+  "occlusion": {
+    "right": {
+      "light_path_mm3": 27126.5,
+      "blocked_mm3": 0.0,
+      "blocked_pct": 0.0
+    },
+    "left": {
+      "light_path_mm3": 27126.5,
+      "blocked_mm3": 0.0,
+      "blocked_pct": 0.0
+    }
+  },
+  "mesh": {
+    "watertight": true,
+    "volume_cm3": 87.49,
+    "bbox_mm": [
+      [
+        -86.3,
+        -37.8,
+        -55.2
+      ],
+      [
+        86.3,
+        37.8,
+        47.7
+      ]
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="178.7mm" height="105.0mm" viewBox="0 0 178.7 105.0">
+<rect width="178.7" height="105.0" fill="#fff"/>
+<g fill="none" stroke="#111" stroke-width="0.4">
+<rect x="36.949999999999996" y="20.0" width="104.8" height="25.0"/>
+<rect x="12.0" y="0.75" width="154.7" height="63.5" stroke="#06c" stroke-dasharray="2,1"/>
+<circle cx="57.849999999999994" cy="32.5" r="12.5" stroke="#c00"/>
+<circle cx="57.849999999999994" cy="32.5" r="12.9" stroke="#c00" stroke-dasharray="1,1"/>
+<circle cx="120.85" cy="32.5" r="12.5" stroke="#c00"/>
+<circle cx="120.85" cy="32.5" r="12.9" stroke="#c00" stroke-dasharray="1,1"/>
+<line x1="57.849999999999994" y1="57.0" x2="120.85" y2="57.0" stroke="#0a0" stroke-width="0.4"/>
+<line x1="57.849999999999994" y1="54.0" x2="57.849999999999994" y2="60.0" stroke="#0a0" stroke-width="0.4"/>
+<line x1="120.85" y1="54.0" x2="120.85" y2="60.0" stroke="#0a0" stroke-width="0.4"/>
+<text x="89.35" y="65.0" font-size="4" text-anchor="middle">IPD 63.0 mm</text>
+<text x="89.35" y="12" font-size="4" text-anchor="middle">top view  f=45.0 d=44.0 e=18.0 lens 25.0mm  - print 1:1 at 100%, do NOT fit to page</text>
+<text x="89.35" y="99.0" font-size="3.4" text-anchor="middle">blue dashed = phone screen footprint, red = lens bore</text>
+</g></svg>
