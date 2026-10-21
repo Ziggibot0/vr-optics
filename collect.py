@@ -86,17 +86,16 @@ def run(cmd):
 def save_reading(rec):
     os.makedirs(LOG_DIR, exist_ok=True)
     rec["ts"] = time.strftime("%Y-%m-%d %H:%M:%S")
-    with open(LOG, "a", encoding="utf-8") as fh:
-        fh.write(json.dumps(rec) + "\n")
 
     f, d, e = rec.get("f"), rec.get("d"), rec.get("e")
     spec = None
     if f and d and e:
         dl = rec.get("dl") or 25.0
         ipd = rec.get("ipd") or 63.0
-        rc, out = run([os.sys.executable, "solve.py", str(f), str(d), str(e),
-                       str(ipd), str(dl), str(63.5), str(146.7), str(63.5),
-                       str(8.2), "2000"])
+        rc, out = run([os.sys.executable, "solve.py",
+                       "f=%s" % f, "d=%s" % d, "e=%s" % e,
+                       "ipd=%s" % ipd, "dl=%s" % dl, "hs=63.5", "ws=146.7",
+                       "pt=8.2", "tp=2000"])
         rc2, out2 = run([os.sys.executable, "cradle.py", "--f", str(f), "--d", str(d),
                          "--e", str(e), "--ipd", str(ipd), "--dl", str(dl)])
         try:
@@ -106,6 +105,12 @@ def save_reading(rec):
             spec = None
         rec["solve_output"] = out.strip()
         rec["cradle_output"] = out2.strip()[-2000:]
+        rec["solve_rc"] = rc
+        rec["cradle_rc"] = rc2
+
+    # Log AFTER the solve so the raw record carries the derived numbers too.
+    with open(LOG, "a", encoding="utf-8") as fh:
+        fh.write(json.dumps(rec) + "\n")
     write_note(rec, spec)
     return rec, spec
 
